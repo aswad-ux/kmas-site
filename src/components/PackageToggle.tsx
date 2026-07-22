@@ -69,7 +69,7 @@ export default function PackageToggle() {
             }`}
           >
             <Image 
-              src="/icons/tracker-logo.svg" 
+              src="/icons/tracker-logo.png" 
               alt="Tracker" 
               width={110} 
               height={30} 
