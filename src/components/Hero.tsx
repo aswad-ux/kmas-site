@@ -17,16 +17,16 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#F9FAFB] overflow-hidden">
+    <section className="relative bg-[#09090B] overflow-hidden">
       {/* Subtle grid background */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            "linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)",
+            "linear-gradient(to right, #27272a 1px, transparent 1px), linear-gradient(to bottom, #27272a 1px, transparent 1px)",
           backgroundSize: "60px 60px",
-          opacity: 0.35,
+          opacity: 0.6,
         }}
       />
 
@@ -46,18 +46,18 @@ export default function Hero() {
             </div>
 
             {/* H1 */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#09090B] leading-tight tracking-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#F9FAFB] leading-tight tracking-tight">
               Complete Vehicle{" "}
               <span className="text-[#DC1B1B]">Protection</span>{" "}
               &amp; Fitment.
               <br />
-              <span className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-light text-[#09090B]/80">
+              <span className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-light text-[#F9FAFB]/80">
                 Installed at Your Convenience.
               </span>
             </h1>
 
             {/* Sub-headline */}
-            <p className="mt-5 text-sm sm:text-base text-[#09090B]/70 max-w-xl leading-relaxed">
+            <p className="mt-5 text-sm sm:text-base text-[#F9FAFB]/70 max-w-xl leading-relaxed">
               Fast mobile tracking installation across Gauteng, instant
               insurance certificates, smash-and-grab protection, and premium
               aftermarket fitments — all from one authorised South African
@@ -76,14 +76,14 @@ export default function Hero() {
                 href="https://wa.me/27615242935"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 border border-[#09090B] px-6 py-3.5 text-sm font-semibold text-[#09090B] hover:bg-[#09090B] hover:text-white transition-colors min-h-[48px]"
+                className="inline-flex items-center justify-center gap-2 border border-[#F9FAFB] px-6 py-3.5 text-sm font-semibold text-[#F9FAFB] hover:bg-[#F9FAFB] hover:text-[#09090B] transition-colors min-h-[48px]"
               >
                 <MessageCircle size={15} />
                 WhatsApp Us
               </a>
               <a
                 href="tel:+27100167395"
-                className="inline-flex items-center justify-center gap-2 border border-slate-300 px-6 py-3.5 text-sm font-medium text-[#09090B] hover:border-[#DC1B1B] hover:text-[#DC1B1B] transition-colors min-h-[48px]"
+                className="inline-flex items-center justify-center gap-2 border border-[#27272a] px-6 py-3.5 text-sm font-medium text-[#F9FAFB] hover:border-[#DC1B1B] hover:text-[#DC1B1B] transition-colors min-h-[48px]"
               >
                 <Phone size={15} />
                 +27 10 016 7395
@@ -95,7 +95,7 @@ export default function Hero() {
               href="https://maps.app.goo.gl/3JGSAd1yTZmLNECx8"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-flex items-start gap-2 text-xs text-[#09090B]/50 hover:text-[#DC1B1B] transition-colors"
+              className="mt-5 inline-flex items-start gap-2 text-xs text-[#F9FAFB]/50 hover:text-[#DC1B1B] transition-colors"
             >
               <MapPin size={12} className="mt-0.5 flex-shrink-0" />
               <span>The Foundry Cnr, 21 Isando Rd, Lathe St, Kempton Park, 1619</span>
@@ -104,7 +104,7 @@ export default function Hero() {
 
           {/* Right – Stats panel & Automotive Image */}
           <div className="pb-20 relative lg:mt-0 mt-8">
-            <div className="relative w-full h-[250px] sm:h-[320px] xl:h-[400px] border border-[#09090B] mb-8 bg-[#09090B]">
+            <div className="relative w-full h-[250px] sm:h-[320px] xl:h-[400px] border border-[#27272a] mb-8 bg-[#09090B]">
               <Image
                 src="/images/hero.png"
                 alt="High-performance sports car dashboard interior"
@@ -114,26 +114,26 @@ export default function Hero() {
               />
             </div>
             
-            <div className="border border-slate-200 bg-white p-6 xl:p-8 relative z-10 -mt-24 ml-10 shadow-2xl shadow-black/5">
-              <p className="text-xs font-semibold tracking-widest uppercase text-[#09090B]/40 mb-6">
+            <div className="border border-[#27272a] bg-[#121212] p-6 xl:p-8 relative z-10 -mt-24 ml-10 shadow-2xl shadow-black/50">
+              <p className="text-xs font-semibold tracking-widest uppercase text-[#F9FAFB]/40 mb-6">
                 Why KMAS?
               </p>
-              <div className="grid grid-cols-2 gap-px bg-slate-200">
+              <div className="grid grid-cols-2 gap-px bg-[#27272a]">
                 {stats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="bg-[#F9FAFB] p-5 xl:p-6 flex flex-col gap-1"
+                    className="bg-[#09090B] p-5 xl:p-6 flex flex-col gap-1"
                   >
                     <span className="text-xl xl:text-2xl font-bold text-[#DC1B1B]">
                       {stat.value}
                     </span>
-                    <span className="text-xs text-[#09090B]/60 whitespace-pre-line leading-snug">
+                    <span className="text-xs text-[#F9FAFB]/60 whitespace-pre-line leading-snug">
                       {stat.label}
                     </span>
                   </div>
                 ))}
               </div>
-              <div className="mt-6 border border-slate-200 p-4 bg-[#09090B]">
+              <div className="mt-6 border border-[#27272a] p-4 bg-[#09090B]">
                 <p className="text-xs text-white/60 mb-1 font-semibold uppercase tracking-widest">
                   Operating Hours
                 </p>
@@ -147,18 +147,18 @@ export default function Hero() {
           </div>
 
           {/* Stats shown as a horizontal strip on mobile/tablet only */}
-          <div className="lg:hidden col-span-full -mx-4 sm:-mx-6 grid grid-cols-2 sm:grid-cols-4 border-t border-slate-200">
+          <div className="lg:hidden col-span-full -mx-4 sm:-mx-6 grid grid-cols-2 sm:grid-cols-4 border-t border-[#27272a]">
             {stats.map((stat, i) => (
               <div
                 key={stat.label}
-                className={`p-4 sm:p-5 flex flex-col gap-0.5 bg-white ${
-                  i < stats.length - 1 ? "border-r border-slate-200" : ""
+                className={`p-4 sm:p-5 flex flex-col gap-0.5 bg-[#121212] ${
+                  i < stats.length - 1 ? "border-r border-[#27272a]" : ""
                 }`}
               >
                 <span className="text-lg font-bold text-[#DC1B1B]">
                   {stat.value}
                 </span>
-                <span className="text-[10px] text-[#09090B]/60 leading-snug">
+                <span className="text-[10px] text-[#F9FAFB]/60 leading-snug">
                   {stat.label.replace("\n", " ")}
                 </span>
               </div>
@@ -168,13 +168,13 @@ export default function Hero() {
       </div>
 
       {/* Trust Strip */}
-      <div className="relative border-t border-b border-slate-200 bg-white">
+      <div className="relative border-t border-b border-[#27272a] bg-[#121212]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             {trustItems.map((item) => (
               <div
                 key={item}
-                className="flex items-center gap-2 text-xs font-medium text-[#09090B]/60"
+                className="flex items-center gap-2 text-xs font-medium text-[#F9FAFB]/60"
               >
                 <CheckCircle size={12} className="text-[#DC1B1B] flex-shrink-0" />
                 {item}

@@ -38,11 +38,11 @@ export default function InstallationTimeline() {
         </div>
 
         {/* Steps — stacked on mobile, horizontal on md+ */}
-        <div className="flex flex-col md:flex-row border border-neutral-800">
+        <div className="flex flex-col md:flex-row border border-[#27272a]">
           {steps.map((step, i) => (
             <div
               key={step.number}
-              className={`flex-1 p-6 sm:p-8 lg:p-10 border-neutral-800 ${
+              className={`flex-1 p-6 sm:p-8 lg:p-10 border-[#27272a] ${
                 i < steps.length - 1
                   ? "border-b md:border-b-0 md:border-r"
                   : ""
@@ -50,7 +50,7 @@ export default function InstallationTimeline() {
             >
               {/* Step number + icon */}
               <div className="flex items-start justify-between mb-5">
-                <span className="text-4xl sm:text-5xl font-bold text-neutral-800 font-mono select-none leading-none">
+                <span className="text-4xl sm:text-5xl font-bold text-[#27272a] font-mono select-none leading-none">
                   {step.number}
                 </span>
                 <div className="text-[#DC1B1B]">{step.icon}</div>

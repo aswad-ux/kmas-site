@@ -12,7 +12,7 @@ export default function PackageToggle() {
   const packages = active === "matrix" ? matrixPackages : trackerPackages;
 
   return (
-    <section id="tracking" className="bg-white py-16 lg:py-24 border-t border-slate-200">
+    <section id="tracking" className="bg-[#09090B] py-16 lg:py-24 border-t border-[#27272a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="grid lg:grid-cols-2 gap-8 mb-10 lg:mb-12 items-center">
@@ -20,19 +20,19 @@ export default function PackageToggle() {
             <p className="text-xs font-semibold tracking-widest uppercase text-[#DC1B1B] mb-3">
               Vehicle Tracking
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#09090B] leading-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#F9FAFB] leading-tight mb-4">
               Track. Recover.
               <br />
               Insure.
             </h2>
-            <p className="text-[#09090B]/60 text-sm sm:text-base max-w-xl leading-relaxed">
+            <p className="text-[#F9FAFB]/60 text-sm sm:text-base max-w-xl leading-relaxed">
               As an authorised reseller of both Matrix and Tracker South Africa,
               we supply, install, and certificate every unit. All packages
               include a VESA-compliant insurance certificate on the day of
               installation.
             </p>
           </div>
-          <div className="relative h-48 sm:h-64 border border-[#09090B] bg-[#09090B] w-full">
+          <div className="relative h-48 sm:h-64 border border-[#27272a] bg-[#121212] w-full">
             <Image 
               src="/images/tracking.png" 
               alt="High-tech vehicle tracking device" 
@@ -48,8 +48,8 @@ export default function PackageToggle() {
             onClick={() => setActive("matrix")}
             className={`flex-1 py-4 px-6 border transition-all flex items-center justify-center gap-3 ${
               active === "matrix"
-                ? "border-[#09090B] bg-[#09090B] shadow-inner"
-                : "border-slate-200 bg-white hover:border-[#09090B]/50"
+                ? "border-[#DC1B1B] bg-[#121212] shadow-inner"
+                : "border-[#27272a] bg-[#09090B] hover:border-[#DC1B1B]/50"
             }`}
           >
             <Image 
@@ -64,8 +64,8 @@ export default function PackageToggle() {
             onClick={() => setActive("tracker")}
             className={`flex-1 py-4 px-6 border transition-all flex items-center justify-center gap-3 ${
               active === "tracker"
-                ? "border-[#09090B] bg-[#09090B] shadow-inner"
-                : "border-slate-200 bg-white hover:border-[#09090B]/50"
+                ? "border-[#DC1B1B] bg-[#121212] shadow-inner"
+                : "border-[#27272a] bg-[#09090B] hover:border-[#DC1B1B]/50"
             }`}
           >
             <Image 
@@ -79,9 +79,9 @@ export default function PackageToggle() {
         </div>
 
         {/* Package list */}
-        <div className="border border-slate-200 divide-y divide-slate-200">
+        <div className="border border-[#27272a] divide-y divide-[#27272a]">
           {/* Table header — desktop only */}
-          <div className="hidden lg:grid grid-cols-12 bg-[#09090B] px-6 py-3">
+          <div className="hidden lg:grid grid-cols-12 bg-[#121212] px-6 py-3">
             <div className="col-span-3 text-xs font-semibold tracking-widest uppercase text-white/60">
               Package
             </div>
@@ -97,13 +97,13 @@ export default function PackageToggle() {
           {packages.map((pkg) => (
             <div
               key={pkg.id}
-              className="group bg-white hover:bg-[#F9FAFB] transition-colors"
+              className="group bg-[#09090B] hover:bg-[#121212] transition-colors"
             >
               {/* Mobile layout */}
               <div className="lg:hidden p-5 space-y-3">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <span className="font-semibold text-sm text-[#09090B] block">
+                    <span className="font-semibold text-sm text-[#F9FAFB] block">
                       {pkg.name}
                     </span>
                     <span className="text-base font-bold text-[#DC1B1B] mt-0.5 block">
@@ -121,7 +121,7 @@ export default function PackageToggle() {
                   {pkg.features.map((f) => (
                     <li
                       key={f}
-                      className="flex items-center gap-1.5 text-xs text-[#09090B]/70"
+                      className="flex items-center gap-1.5 text-xs text-[#F9FAFB]/70"
                     >
                       <CheckCircle size={11} className="text-[#DC1B1B] flex-shrink-0" />
                       {f}
@@ -130,7 +130,7 @@ export default function PackageToggle() {
                 </ul>
                 <a
                   href="#quote"
-                  className="inline-flex items-center justify-center w-full border border-[#09090B] py-2.5 text-xs font-semibold uppercase tracking-widest text-[#09090B] hover:bg-[#DC1B1B] hover:border-[#DC1B1B] hover:text-white transition-colors min-h-[44px]"
+                  className="inline-flex items-center justify-center w-full border border-[#27272a] py-2.5 text-xs font-semibold uppercase tracking-widest text-[#F9FAFB] hover:bg-[#DC1B1B] hover:border-[#DC1B1B] hover:text-white transition-colors min-h-[44px]"
                 >
                   Select This Package
                 </a>
@@ -141,7 +141,7 @@ export default function PackageToggle() {
                 {/* Name + tag */}
                 <div className="col-span-3">
                   <div className="flex flex-wrap items-start gap-2">
-                    <span className="font-semibold text-sm text-[#09090B]">
+                    <span className="font-semibold text-sm text-[#F9FAFB]">
                       {pkg.name}
                     </span>
                     {pkg.tag && (
@@ -166,7 +166,7 @@ export default function PackageToggle() {
                     {pkg.features.map((f) => (
                       <li
                         key={f}
-                        className="flex items-center gap-1.5 text-xs text-[#09090B]/70"
+                        className="flex items-center gap-1.5 text-xs text-[#F9FAFB]/70"
                       >
                         <CheckCircle
                           size={12}
@@ -182,7 +182,7 @@ export default function PackageToggle() {
                 <div className="col-span-1 flex items-center justify-end">
                   <a
                     href="#quote"
-                    className="text-xs font-semibold uppercase tracking-widest border border-[#09090B] px-3 py-2 text-[#09090B] group-hover:bg-[#DC1B1B] group-hover:border-[#DC1B1B] group-hover:text-white transition-colors whitespace-nowrap"
+                    className="text-xs font-semibold uppercase tracking-widest border border-[#27272a] px-3 py-2 text-[#F9FAFB] group-hover:bg-[#DC1B1B] group-hover:border-[#DC1B1B] group-hover:text-white transition-colors whitespace-nowrap"
                   >
                     Select
                   </a>
@@ -192,7 +192,7 @@ export default function PackageToggle() {
           ))}
         </div>
 
-        <p className="mt-4 text-xs text-[#09090B]/40">
+        <p className="mt-4 text-xs text-[#F9FAFB]/40">
           * All prices are approximate monthly subscriptions. Installation is a
           once-off cost. Contact us for exact pricing.
         </p>

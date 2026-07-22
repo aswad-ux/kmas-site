@@ -22,7 +22,7 @@ export default function Footer() {
     <footer className="bg-[#09090B] text-white">
       {/* Main footer content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-neutral-800 pb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-[#27272a] pb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
@@ -44,7 +44,7 @@ export default function Footer() {
               {["VESA Compliant", "Authorised Reseller", "Certified Fitment"].map((b) => (
                 <span
                   key={b}
-                  className="text-[10px] font-semibold tracking-widest uppercase border border-neutral-700 px-2 py-1 text-white/40"
+                  className="text-[10px] font-semibold tracking-widest uppercase border border-[#3f3f46] px-2 py-1 text-white/40"
                 >
                   {b}
                 </span>
@@ -147,10 +147,10 @@ export default function Footer() {
       </div>
 
       {/* Mobile sticky CTA bar */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#09090B] border-t border-neutral-800 flex">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#09090B] border-t border-[#27272a] flex">
         <a
           href="tel:+27100167395"
-          className="flex-1 flex items-center justify-center gap-2 py-3.5 text-xs font-semibold text-white border-r border-neutral-800"
+          className="flex-1 flex items-center justify-center gap-2 py-3.5 text-xs font-semibold text-white border-r border-[#27272a]"
         >
           <Phone size={14} />
           Call Us

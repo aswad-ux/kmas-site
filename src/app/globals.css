@@ -1,14 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @theme inline {
-  --color-background: #F9FAFB;
-  --color-foreground: #09090B;
+  --color-background: #09090B;
+  --color-foreground: #F9FAFB;
   --color-accent: #DC1B1B;
   --color-accent-dark: #a81212;
   --color-charcoal: #09090B;
   --color-off-white: #F9FAFB;
-  --font-display: 'Hanken Grotesk', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
@@ -22,15 +22,15 @@ html {
 }
 
 body {
-  background-color: #F9FAFB;
-  color: #09090B;
+  background-color: #09090B;
+  color: #F9FAFB;
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* ─── Typography utilities ─────────────────────────── */
-.font-display { font-family: 'Hanken Grotesk', sans-serif; }
+.font-display { font-family: 'Space Grotesk', sans-serif; }
 .font-mono-label { font-family: 'JetBrains Mono', monospace; }
 
 /* ─── Brand colour utilities ──────────────────────── */
@@ -40,13 +40,13 @@ body {
 .hover\:bg-accent-dark:hover { background-color: #a81212; }
 
 /* ─── Ruled border utility (1px industrial lines) ─── */
-.border-rule { border: 1px solid #e5e7eb; }
-.border-rule-dark { border: 1px solid #09090B; }
+.border-rule { border: 1px solid #27272a; }
+.border-rule-dark { border: 1px solid #3f3f46; }
 
 /* ─── Scrollbar ──────────────────────────────────── */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #F9FAFB; }
-::-webkit-scrollbar-thumb { background: #d1d5db; }
+::-webkit-scrollbar-track { background: #09090B; }
+::-webkit-scrollbar-thumb { background: #27272a; }
 
 /* ─── Ticker / marquee for trust strip ──────────── */
 @keyframes ticker {
