@@ -32,7 +32,7 @@ export default function PackageToggle() {
               installation.
             </p>
           </div>
-          <div className="hidden lg:block relative h-64 border border-[#09090B] bg-[#09090B]">
+          <div className="relative h-48 sm:h-64 border border-[#09090B] bg-[#09090B] w-full">
             <Image 
               src="/images/tracking.png" 
               alt="High-tech vehicle tracking device" 
@@ -43,20 +43,39 @@ export default function PackageToggle() {
         </div>
 
         {/* Toggle tabs — full width on mobile */}
-        <div className="flex border border-slate-200 w-full sm:w-fit mb-8">
-          {(["matrix", "tracker"] as Tab[]).map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActive(tab)}
-              className={`flex-1 sm:flex-none sm:px-10 py-3 text-sm font-semibold tracking-wide uppercase transition-colors min-h-[48px] ${
-                active === tab
-                  ? "bg-[#09090B] text-white"
-                  : "bg-white text-[#09090B]/60 hover:text-[#09090B]"
-              }`}
-            >
-              {tab === "matrix" ? "Matrix" : "Tracker SA"}
-            </button>
-          ))}
+        <div className="flex flex-col sm:flex-row gap-4 mb-10">
+          <button
+            onClick={() => setActive("matrix")}
+            className={`flex-1 py-4 px-6 border transition-all flex items-center justify-center gap-3 ${
+              active === "matrix"
+                ? "border-[#09090B] bg-[#09090B] shadow-inner"
+                : "border-slate-200 bg-white hover:border-[#09090B]/50"
+            }`}
+          >
+            <Image 
+              src="/icons/matrix-logo.svg" 
+              alt="Matrix" 
+              width={100} 
+              height={30} 
+              className={active === "matrix" ? "brightness-0 invert" : ""}
+            />
+          </button>
+          <button
+            onClick={() => setActive("tracker")}
+            className={`flex-1 py-4 px-6 border transition-all flex items-center justify-center gap-3 ${
+              active === "tracker"
+                ? "border-[#09090B] bg-[#09090B] shadow-inner"
+                : "border-slate-200 bg-white hover:border-[#09090B]/50"
+            }`}
+          >
+            <Image 
+              src="/icons/tracker-logo.svg" 
+              alt="Tracker" 
+              width={110} 
+              height={30} 
+              className={active === "tracker" ? "brightness-0 invert" : ""}
+            />
+          </button>
         </div>
 
         {/* Package list */}

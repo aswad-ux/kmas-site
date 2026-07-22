@@ -30,7 +30,7 @@ export default function FitmentGrid() {
               Professional workmanship, guaranteed.
             </p>
           </div>
-          <div className="hidden lg:block relative h-64 border border-[#09090B] bg-[#09090B]">
+          <div className="relative h-48 sm:h-64 border border-[#09090B] bg-[#09090B] w-full">
             <Image 
               src="/images/fitment.png" 
               alt="Professional mechanic installing dashcam" 

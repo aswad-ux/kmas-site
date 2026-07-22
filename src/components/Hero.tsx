@@ -102,9 +102,9 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Right – Stats panel & Automotive Image (lg only) */}
-          <div className="hidden lg:block pb-20 relative">
-            <div className="relative w-full h-[320px] xl:h-[400px] border border-[#09090B] mb-8 bg-[#09090B]">
+          {/* Right – Stats panel & Automotive Image */}
+          <div className="pb-20 relative lg:mt-0 mt-8">
+            <div className="relative w-full h-[250px] sm:h-[320px] xl:h-[400px] border border-[#09090B] mb-8 bg-[#09090B]">
               <Image
                 src="/images/hero.png"
                 alt="High-performance sports car dashboard interior"

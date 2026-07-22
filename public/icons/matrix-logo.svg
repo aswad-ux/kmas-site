@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <path d="M10 50 L30 10 L50 50" stroke="#DC1B1B" stroke-width="8" fill="none" stroke-linejoin="round"/>
+  <path d="M18 35 L42 35" stroke="#DC1B1B" stroke-width="8" fill="none"/>
+  <text x="65" y="42" font-family="system-ui, sans-serif" font-weight="900" font-size="34" fill="#09090B" letter-spacing="-1">MATRIX</text>
+</svg>
