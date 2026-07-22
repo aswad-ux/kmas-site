@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { CheckCircle, Tag } from "lucide-react";
+import Image from "next/image";
 import { matrixPackages, trackerPackages } from "@/data/packages";
 
 type Tab = "matrix" | "tracker";
@@ -14,12 +15,12 @@ export default function PackageToggle() {
     <section id="tracking" className="bg-white py-16 lg:py-24 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-10 lg:mb-12">
-          <p className="text-xs font-semibold tracking-widest uppercase text-[#DC1B1B] mb-3">
-            Vehicle Tracking
-          </p>
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#09090B] leading-tight">
+        <div className="grid lg:grid-cols-2 gap-8 mb-10 lg:mb-12 items-center">
+          <div>
+            <p className="text-xs font-semibold tracking-widest uppercase text-[#DC1B1B] mb-3">
+              Vehicle Tracking
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#09090B] leading-tight mb-4">
               Track. Recover.
               <br />
               Insure.
@@ -30,6 +31,14 @@ export default function PackageToggle() {
               include a VESA-compliant insurance certificate on the day of
               installation.
             </p>
+          </div>
+          <div className="hidden lg:block relative h-64 border border-[#09090B] bg-[#09090B]">
+            <Image 
+              src="/images/tracking.png" 
+              alt="High-tech vehicle tracking device" 
+              fill 
+              className="object-cover opacity-90 grayscale-[15%]" 
+            />
           </div>
         </div>
 

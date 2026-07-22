@@ -1,4 +1,5 @@
 import { CheckCircle, MessageCircle, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
 
 const trustItems = [
   "VESA Compliant",
@@ -101,9 +102,19 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Right – Stats panel (visible from lg, shown below copy on md) */}
-          <div className="hidden lg:block pb-20">
-            <div className="border border-slate-200 bg-white p-6 xl:p-8">
+          {/* Right – Stats panel & Automotive Image (lg only) */}
+          <div className="hidden lg:block pb-20 relative">
+            <div className="relative w-full h-[320px] xl:h-[400px] border border-[#09090B] mb-8 bg-[#09090B]">
+              <Image
+                src="/images/hero.png"
+                alt="High-performance sports car dashboard interior"
+                fill
+                className="object-cover opacity-90"
+                priority
+              />
+            </div>
+            
+            <div className="border border-slate-200 bg-white p-6 xl:p-8 relative z-10 -mt-24 ml-10 shadow-2xl shadow-black/5">
               <p className="text-xs font-semibold tracking-widest uppercase text-[#09090B]/40 mb-6">
                 Why KMAS?
               </p>

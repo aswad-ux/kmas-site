@@ -14,12 +14,12 @@ export default function FitmentGrid() {
     <section id="services" className="bg-[#F9FAFB] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="mb-10 lg:mb-14">
-          <p className="text-xs font-semibold tracking-widest uppercase text-[#DC1B1B] mb-3">
-            Fitment Centre
-          </p>
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#09090B] leading-tight">
+        <div className="grid lg:grid-cols-2 gap-8 mb-10 lg:mb-14 items-center">
+          <div>
+            <p className="text-xs font-semibold tracking-widest uppercase text-[#DC1B1B] mb-3">
+              Fitment Centre
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#09090B] leading-tight mb-4">
               Expert Aftermarket
               <br />
               Installations
@@ -29,6 +29,14 @@ export default function FitmentGrid() {
               tools for your specific vehicle. No shortcuts. No void warranties.
               Professional workmanship, guaranteed.
             </p>
+          </div>
+          <div className="hidden lg:block relative h-64 border border-[#09090B] bg-[#09090B]">
+            <Image 
+              src="/images/fitment.png" 
+              alt="Professional mechanic installing dashcam" 
+              fill 
+              className="object-cover opacity-90 grayscale-[20%]" 
+            />
           </div>
         </div>
 
