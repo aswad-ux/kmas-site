@@ -1,0 +1,176 @@
+import Image from "next/image";
+import { MapPin, Phone, MessageCircle } from "lucide-react";
+
+const navLinks = [
+  { label: "Vehicle Tracking", href: "#tracking" },
+  { label: "Fitment Services", href: "#services" },
+  { label: "How It Works", href: "#process" },
+  { label: "Get a Quote", href: "#quote" },
+];
+
+const services = [
+  "Matrix Tracking Installation",
+  "Tracker South Africa Installation",
+  "Window Tinting & Smash‑and‑Grab",
+  "Sound System Upgrades",
+  "Dash Cams & Reverse Cameras",
+  "Bull Bars, Towbars & Roll Bars",
+];
+
+export default function Footer() {
+  return (
+    <footer className="bg-[#09090B] text-white">
+      {/* Main footer content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-neutral-800 pb-12">
+          {/* Brand */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center mb-4">
+              <Image
+                src="/images/logo.png"
+                alt="Kingsman Automotive Solutions"
+                width={120}
+                height={34}
+                className="h-8 w-auto object-contain brightness-0 invert"
+              />
+            </div>
+            <p className="text-sm text-white/50 leading-relaxed mb-6">
+              Kingsman Automotive Solutions — South Africa's authorised reseller
+              and mobile installer of premium vehicle tracking and security
+              systems.
+            </p>
+            {/* Trust badges */}
+            <div className="flex flex-wrap gap-2">
+              {["VESA Compliant", "Authorised Reseller", "Certified Fitment"].map((b) => (
+                <span
+                  key={b}
+                  className="text-[10px] font-semibold tracking-widest uppercase border border-neutral-700 px-2 py-1 text-white/40"
+                >
+                  {b}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation */}
+          <div>
+            <p className="text-xs font-semibold tracking-widest uppercase text-white/30 mb-4">
+              Navigation
+            </p>
+            <ul className="space-y-3">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="text-sm text-white/60 hover:text-[#DC1B1B] transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <p className="text-xs font-semibold tracking-widest uppercase text-white/30 mb-4">
+              Our Services
+            </p>
+            <ul className="space-y-3">
+              {services.map((s) => (
+                <li key={s}>
+                  <a
+                    href="#services"
+                    className="text-sm text-white/60 hover:text-[#DC1B1B] transition-colors"
+                  >
+                    {s}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <p className="text-xs font-semibold tracking-widest uppercase text-white/30 mb-4">
+              Contact
+            </p>
+            <div className="space-y-4">
+              <a
+                href="https://wa.me/27615242935"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-sm text-white/60 hover:text-[#DC1B1B] transition-colors"
+              >
+                <MessageCircle size={14} className="text-[#DC1B1B] flex-shrink-0" />
+                +27 61 524 2935 (WhatsApp)
+              </a>
+              <a
+                href="tel:+27100167395"
+                className="flex items-center gap-3 text-sm text-white/60 hover:text-[#DC1B1B] transition-colors"
+              >
+                <Phone size={14} className="text-[#DC1B1B] flex-shrink-0" />
+                +27 10 016 7395
+              </a>
+              <a
+                href="https://maps.app.goo.gl/3JGSAd1yTZmLNECx8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 text-sm text-white/60 hover:text-[#DC1B1B] transition-colors"
+              >
+                <MapPin size={14} className="text-[#DC1B1B] flex-shrink-0 mt-0.5" />
+                <span>
+                  The Foundry Cnr, 21 Isando Rd,
+                  <br />
+                  Lathe St, Kempton Park, 1619
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-white/30">
+            © {new Date().getFullYear()} Kingsman Automotive Solutions. All
+            rights reserved.
+          </p>
+          <div className="flex gap-6">
+            <span className="text-xs text-white/20">
+              Authorised Matrix Reseller
+            </span>
+            <span className="text-xs text-white/20">
+              Authorised Tracker SA Reseller
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile sticky CTA bar */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#09090B] border-t border-neutral-800 flex">
+        <a
+          href="tel:+27100167395"
+          className="flex-1 flex items-center justify-center gap-2 py-3.5 text-xs font-semibold text-white border-r border-neutral-800"
+        >
+          <Phone size={14} />
+          Call Us
+        </a>
+        <a
+          href="https://wa.me/27615242935"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 flex items-center justify-center gap-2 py-3.5 text-xs font-semibold bg-[#DC1B1B] text-white"
+        >
+          <MessageCircle size={14} />
+          WhatsApp
+        </a>
+        <a
+          href="#quote"
+          className="flex-1 flex items-center justify-center gap-2 py-3.5 text-xs font-semibold text-white/80"
+        >
+          Get Quote
+        </a>
+      </div>
+    </footer>
+  );
+}

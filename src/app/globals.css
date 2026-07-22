@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #F9FAFB;
+  --color-foreground: #09090B;
+  --color-accent: #DC1B1B;
+  --color-accent-dark: #a81212;
+  --font-sans: Inter, Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F9FAFB;
+  color: #09090B;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accent utility classes */
+.bg-accent { background-color: #DC1B1B; }
+.text-accent { color: #DC1B1B; }
+.border-accent { border-color: #DC1B1B; }
+.hover\:bg-accent-dark:hover { background-color: #a81212; }
+
+/* Custom thin border utility */
+.border-thin { border-width: 1px; }
+
+/* Hide scrollbar on mobile sticky nav */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F9FAFB; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
