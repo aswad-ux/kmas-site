@@ -52,13 +52,14 @@ export default function PackageToggle() {
                 : "border-[#27272a] bg-[#09090B] hover:border-[#DC1B1B]/50"
             }`}
           >
-            <Image 
-              src="/icons/matrix-logo.svg" 
-              alt="Matrix" 
-              width={100} 
-              height={30} 
-              className={active === "matrix" ? "brightness-0 invert" : ""}
-            />
+            <div className="bg-[#F9FAFB] px-3 py-1 flex items-center justify-center">
+              <Image 
+                src="/icons/matrix-logo.svg" 
+                alt="Matrix" 
+                width={90} 
+                height={26} 
+              />
+            </div>
           </button>
           <button
             onClick={() => setActive("tracker")}
@@ -68,13 +69,14 @@ export default function PackageToggle() {
                 : "border-[#27272a] bg-[#09090B] hover:border-[#DC1B1B]/50"
             }`}
           >
-            <Image 
-              src="/icons/tracker-logo.png" 
-              alt="Tracker" 
-              width={110} 
-              height={30} 
-              className={active === "tracker" ? "brightness-0 invert" : ""}
-            />
+            <div className="bg-[#F9FAFB] px-3 py-1 flex items-center justify-center">
+              <Image 
+                src="/icons/tracker-logo.png" 
+                alt="Tracker" 
+                width={90} 
+                height={26} 
+              />
+            </div>
           </button>
         </div>
 

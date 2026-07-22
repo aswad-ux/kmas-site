@@ -38,9 +38,9 @@ export default function Hero() {
           {/* Left – Copy */}
           <div className="pb-10 lg:pb-20">
             {/* Pre-headline badge */}
-            <div className="inline-flex items-center gap-2 border border-[#DC1B1B] px-3 py-1.5 mb-6 flex-wrap">
+            <div className="inline-flex items-center gap-3 border border-[#DC1B1B] px-4 py-2 mb-6 flex-wrap">
               <span className="w-2 h-2 rounded-full bg-[#DC1B1B] animate-pulse flex-shrink-0" />
-              <span className="text-[#DC1B1B] text-[10px] sm:text-xs font-semibold tracking-widest uppercase">
+              <span className="text-[#DC1B1B] text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase">
                 Authorised Reseller · Matrix &amp; Tracker South Africa
               </span>
             </div>
