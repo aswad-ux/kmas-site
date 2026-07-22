@@ -1,11 +1,16 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @theme inline {
   --color-background: #F9FAFB;
   --color-foreground: #09090B;
   --color-accent: #DC1B1B;
   --color-accent-dark: #a81212;
-  --font-sans: Inter, Arial, Helvetica, sans-serif;
+  --color-charcoal: #09090B;
+  --color-off-white: #F9FAFB;
+  --font-display: 'Hanken Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 * {
@@ -19,21 +24,61 @@ html {
 body {
   background-color: #F9FAFB;
   color: #09090B;
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Accent utility classes */
+/* ─── Typography utilities ─────────────────────────── */
+.font-display { font-family: 'Hanken Grotesk', sans-serif; }
+.font-mono-label { font-family: 'JetBrains Mono', monospace; }
+
+/* ─── Brand colour utilities ──────────────────────── */
 .bg-accent { background-color: #DC1B1B; }
 .text-accent { color: #DC1B1B; }
 .border-accent { border-color: #DC1B1B; }
 .hover\:bg-accent-dark:hover { background-color: #a81212; }
 
-/* Custom thin border utility */
-.border-thin { border-width: 1px; }
+/* ─── Ruled border utility (1px industrial lines) ─── */
+.border-rule { border: 1px solid #e5e7eb; }
+.border-rule-dark { border: 1px solid #09090B; }
 
-/* Hide scrollbar on mobile sticky nav */
-::-webkit-scrollbar { width: 6px; }
+/* ─── Scrollbar ──────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #F9FAFB; }
-::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #d1d5db; }
+
+/* ─── Ticker / marquee for trust strip ──────────── */
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+.ticker-track:hover { animation-play-state: paused; }
+
+/* ─── Pulsing dot ────────────────────────────────── */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.75); }
+}
+.pulse-dot { animation: pulse-dot 1.8s ease-in-out infinite; }
+
+/* ─── Hover underline slide ──────────────────────── */
+.underline-slide {
+  position: relative;
+}
+.underline-slide::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #DC1B1B;
+  transition: width 0.25s ease;
+}
+.underline-slide:hover::after { width: 100%; }
