@@ -49,16 +49,26 @@ export default function QuoteForm() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    try {
-      await fetch("/api/quote", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-    } catch (_) {}
+    
+    // Construct WhatsApp message
+    const serviceLabel = services.find(s => s.value === form.service)?.label || form.service;
+    const message = `*New Quote Request*
+
+*Name:* ${form.name}
+*Contact:* ${form.contact}
+*Vehicle:* ${form.make} ${form.model}
+*Service:* ${serviceLabel}
+*Province:* ${form.province}
+*Callback Requested:* ${form.callback ? 'Yes' : 'No'}`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/27615242935?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+    
     setLoading(false);
     setSubmitted(true);
   };
