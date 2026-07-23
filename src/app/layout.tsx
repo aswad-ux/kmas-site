@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     "Kingsman Automotive Solutions – Mobile Tracker & Fitment | Kempton Park, Gauteng",
   description:
     "Premium VESA-approved vehicle tracking, smash-and-grab tinting, dash cams, sound upgrades & accessories. Mobile installation with instant insurance certificates. Call +27 10 016 7395.",
+  icons: {
+    icon: "/favicon.ico",
+  },
   keywords: [
     "matrix tracker mobile installation Gauteng",
     "tracker south africa vehicle tracking Pretoria",
