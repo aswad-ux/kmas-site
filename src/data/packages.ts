@@ -3,7 +3,7 @@ export const matrixPackages = [
   {
     id: "bronze",
     name: "Matrix Bronze (MXV)",
-    price: "~R189 p/m",
+    price: "R179 p/m",
     tag: null,
     features: [
       "GPS Pinpoint Positioning",
@@ -17,7 +17,7 @@ export const matrixPackages = [
   {
     id: "silver",
     name: "Matrix Silver",
-    price: "~R209 p/m",
+    price: "R189 p/m",
     tag: "Most Popular",
     features: [
       "Everything in Bronze",
@@ -31,7 +31,7 @@ export const matrixPackages = [
   {
     id: "gold",
     name: "Matrix Gold",
-    price: "~R239 p/m",
+    price: "R199 p/m",
     tag: null,
     features: [
       "Everything in Silver",
