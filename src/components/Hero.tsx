@@ -38,11 +38,15 @@ export default function Hero() {
           {/* Left – Copy */}
           <div className="pb-10 lg:pb-20">
             {/* Pre-headline badge */}
-            <div className="inline-flex items-center gap-3 border border-[#DC1B1B] px-4 py-2 mb-6 flex-wrap">
-              <span className="w-2 h-2 rounded-full bg-[#DC1B1B] animate-pulse flex-shrink-0" />
-              <span className="text-[#DC1B1B] text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase">
-                Authorised Reseller · Matrix &amp; Tracker South Africa
-              </span>
+            <div className="inline-flex items-center border border-[#27272a] bg-gradient-to-r from-[#09090B] to-[#121212] mb-6 shadow-sm overflow-hidden">
+              <div className="bg-[#DC1B1B] px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-center">
+                <span className="w-1.5 h-1.5 bg-white animate-pulse shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
+              </div>
+              <div className="px-4 py-2 sm:py-2.5 flex items-center border-l border-[#27272a]">
+                <span className="text-[#F9FAFB] text-[10px] sm:text-xs font-semibold font-mono tracking-[0.15em] sm:tracking-[0.2em] uppercase">
+                  Authorised Reseller <span className="text-[#DC1B1B] mx-1.5 font-bold">|</span> Matrix &amp; Tracker SA
+                </span>
+              </div>
             </div>
 
             {/* H1 */}
