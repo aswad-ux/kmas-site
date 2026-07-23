@@ -52,9 +52,9 @@ export default function PackageToggle() {
                 : "border-[#27272a] bg-[#09090B] hover:border-[#DC1B1B]/50"
             }`}
           >
-            <div className="bg-[#F9FAFB] px-3 py-1 flex items-center justify-center">
+            <div className="bg-[#F9FAFB] px-3 py-1 flex items-center justify-center rounded-sm">
               <Image 
-                src="/icons/matrix-logo.svg" 
+                src="/icons/matrix-logo-new.png" 
                 alt="Matrix" 
                 width={90} 
                 height={26} 
