@@ -31,7 +31,7 @@ export default function Footer() {
                 alt="Kingsman Automotive Solutions"
                 width={120}
                 height={34}
-                className="h-8 w-auto object-contain brightness-0 invert"
+                className="h-8 w-auto object-contain"
               />
             </div>
             <p className="text-sm text-white/50 leading-relaxed mb-6">
