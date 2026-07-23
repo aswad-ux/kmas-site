@@ -53,11 +53,12 @@ export default function PackageToggle() {
             }`}
           >
             <div className="bg-[#F9FAFB] px-3 py-1 flex items-center justify-center rounded-sm">
-              <Image 
+              <img 
                 src="/icons/matrix-logo-new.png" 
                 alt="Matrix" 
                 width={90} 
-                height={26} 
+                height={26}
+                className="object-contain"
               />
             </div>
           </button>
