@@ -5,6 +5,8 @@ import PackageToggle from "@/components/PackageToggle";
 import InstallationTimeline from "@/components/InstallationTimeline";
 import QuoteForm from "@/components/QuoteForm";
 import Footer from "@/components/Footer";
+import ContactLocation from "@/components/ContactLocation";
+import FAQ from "@/components/FAQ";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <FitmentGrid />
       <PackageToggle />
       <InstallationTimeline />
+      <ContactLocation />
+      <FAQ />
       <QuoteForm />
       <Footer />
     </main>

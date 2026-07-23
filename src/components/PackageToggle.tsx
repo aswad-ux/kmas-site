@@ -195,8 +195,7 @@ export default function PackageToggle() {
         </div>
 
         <p className="mt-4 text-xs text-[#F9FAFB]/40">
-          * All prices are approximate monthly subscriptions. Installation is a
-          once-off cost. Contact us for exact pricing.
+          * All prices are approximate monthly subscriptions. <strong className="text-[#F9FAFB]/70">We do not charge any installation fees!</strong> Contact us for an exact quote.
         </p>
       </div>
     </section>
