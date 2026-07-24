@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title:
     "Kingsman Automotive Solutions – Mobile Tracker & Fitment | Kempton Park, Gauteng",
   description:
-    "Premium VESA-approved vehicle tracking, smash-and-grab tinting, dash cams, sound upgrades & accessories. Mobile installation with instant insurance certificates. Call +27 10 016 7395.",
+    "Premium VESA-approved vehicle tracking, smash-and-grab tinting, dash cams, sound upgrades & accessories. Free mobile installation across Gauteng. Call +27 10 016 7395.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kingsman Automotive Solutions – Vehicle Tracking & Fitment",
     description:
-      "Authorised Matrix & Tracker SA reseller. Mobile installation, instant insurance certificates. Kempton Park, Gauteng.",
+      "Authorised Matrix & Tracker SA reseller. Free mobile installation, no fitment fees. Kempton Park, Gauteng.",
     type: "website",
     locale: "en_ZA",
     siteName: "Kingsman Automotive Solutions",

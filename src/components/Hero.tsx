@@ -3,16 +3,16 @@ import Image from "next/image";
 
 const trustItems = [
   "VESA Compliant",
-  "Instant Insurance Certificates",
   "24/7 Control Centre Backing",
   "Expert Mobile Technicians",
+  "No Installation Fees",
 ];
 
 const stats = [
   { value: "24/7", label: "Control Centre\nSupport" },
   { value: "VESA", label: "Compliant\nCertification" },
   { value: "Same Day", label: "Mobile\nInstallation" },
-  { value: "Instant", label: "Insurance\nCertificates" },
+  { value: "Free", label: "No Installation\nFees" },
 ];
 
 export default function Hero() {
