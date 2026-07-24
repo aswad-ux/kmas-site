@@ -6,9 +6,10 @@ import { Phone, MessageCircle, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Tracking", href: "#tracking" },
-  { label: "Fitment Services", href: "#services" },
-  { label: "How It Works", href: "#process" },
+  { label: "Fitment Centre", href: "/#services" },
+  { label: "Vehicle Tracking", href: "/#tracking" },
+  { label: "About Us", href: "/#about" },
+  { label: "How It Works", href: "/#process" },
   { label: "Get a Quote", href: "#quote" },
 ];
 

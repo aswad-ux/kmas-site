@@ -4,6 +4,7 @@ import { MapPin, Phone, MessageCircle } from "lucide-react";
 const navLinks = [
   { label: "Vehicle Tracking", href: "#tracking" },
   { label: "Fitment Services", href: "#services" },
+  { label: "About Us", href: "#about" },
   { label: "How It Works", href: "#process" },
   { label: "Get a Quote", href: "#quote" },
 ];
@@ -93,11 +94,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-white/30">
-            © {new Date().getFullYear()} Kingsman Automotive Solutions. All
-            rights reserved.
-          </p>
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-4 text-xs text-white/30">
+            <p>
+              © {new Date().getFullYear()} Kingsman Automotive Solutions. All rights reserved.
+            </p>
+            <a href="/privacy-policy" className="hover:text-white transition-colors">
+              Privacy Policy (POPIA)
+            </a>
+          </div>
           <div className="flex gap-6">
             <span className="text-xs text-white/20">
               Authorised Matrix Reseller

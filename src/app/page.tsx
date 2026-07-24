@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import AboutUs from "@/components/AboutUs";
 import FitmentGrid from "@/components/FitmentGrid";
 import PackageToggle from "@/components/PackageToggle";
 import InstallationTimeline from "@/components/InstallationTimeline";
@@ -16,6 +17,7 @@ export default function Home() {
     <main className="flex-1 pb-16 md:pb-0">
       <Navbar />
       <Hero />
+      <AboutUs />
       <FitmentGrid />
       <PackageToggle />
       <InstallationTimeline />
