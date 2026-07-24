@@ -109,31 +109,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Mobile sticky CTA bar */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#09090B] border-t border-[#27272a] flex">
-        <a
-          href="tel:+27100167395"
-          className="flex-1 flex items-center justify-center gap-2 py-3.5 text-xs font-semibold text-white border-r border-[#27272a]"
-        >
-          <Phone size={14} />
-          Call Us
-        </a>
-        <a
-          href="https://wa.me/27615242935"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 flex items-center justify-center gap-2 py-3.5 text-xs font-semibold bg-[#DC1B1B] text-white"
-        >
-          <MessageCircle size={14} />
-          WhatsApp
-        </a>
-        <a
-          href="#quote"
-          className="flex-1 flex items-center justify-center gap-2 py-3.5 text-xs font-semibold text-white/80"
-        >
-          Get Quote
-        </a>
-      </div>
     </footer>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Send, Phone, Loader2 } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const provinces = [
   "Gauteng",
@@ -72,28 +73,35 @@ export default function QuoteForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     
-    // Construct WhatsApp message
     const serviceLabel = services.find(s => s.value === form.service)?.label || form.service;
-    const message = `*New Quote Request*
-
-*Name:* ${form.name}
-*Contact:* ${form.contact}
-*Vehicle:* ${form.make} ${form.model}
-*Service:* ${serviceLabel}
-*Province:* ${form.province}
-*Callback Requested:* ${form.callback ? 'Yes' : 'No'}`;
     
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/27615242935?text=${encodedMessage}`;
-    
-    window.open(whatsappUrl, '_blank');
-    
-    setLoading(false);
-    setSubmitted(true);
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID',
+        {
+          name: form.name,
+          contact: form.contact,
+          make: form.make,
+          model: form.model,
+          service: serviceLabel,
+          province: form.province,
+          callback: form.callback ? 'Yes' : 'No',
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
+      );
+      
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      alert("Something went wrong. Please try contacting us via WhatsApp or Phone.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {

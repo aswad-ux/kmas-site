@@ -35,9 +35,21 @@ export const metadata: Metadata = {
     title: "Kingsman Automotive Solutions – Vehicle Tracking & Fitment",
     description:
       "Authorised Matrix & Tracker SA reseller. Free mobile installation, no fitment fees. Kempton Park, Gauteng.",
+    url: "https://kmas.co.za",
     type: "website",
     locale: "en_ZA",
     siteName: "Kingsman Automotive Solutions",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Kingsman Automotive Solutions",
+      },
+    ],
+  },
+  verification: {
+    google: "YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE",
   },
   other: {
     "application/ld+json": JSON.stringify({
