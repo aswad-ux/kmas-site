@@ -7,6 +7,9 @@ import QuoteForm from "@/components/QuoteForm";
 import Footer from "@/components/Footer";
 import ContactLocation from "@/components/ContactLocation";
 import FAQ from "@/components/FAQ";
+import Testimonials from "@/components/Testimonials";
+import WhatsAppFAB from "@/components/WhatsAppFAB";
+import MobileBottomNav from "@/components/MobileBottomNav";
 
 export default function Home() {
   return (
@@ -16,10 +19,14 @@ export default function Home() {
       <FitmentGrid />
       <PackageToggle />
       <InstallationTimeline />
+      <Testimonials />
       <FAQ />
       <QuoteForm />
       <ContactLocation />
       <Footer />
+      <WhatsAppFAB />
+      <MobileBottomNav />
     </main>
   );
 }
+

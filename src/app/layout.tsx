@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ScrollRevealInit from "@/components/ScrollRevealInit";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -68,6 +69,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="min-h-full flex flex-col bg-[#09090B] text-[#F9FAFB] antialiased">
+        <ScrollRevealInit />
         {children}
       </body>
     </html>

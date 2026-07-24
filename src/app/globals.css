@@ -82,3 +82,61 @@ body {
   transition: width 0.25s ease;
 }
 .underline-slide:hover::after { width: 100%; }
+
+/* ─── Scroll-triggered fade-up animation ─────────────── */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fade-up 0.6s ease forwards;
+}
+
+/* Staggered delays */
+.fade-up-d1 { animation-delay: 0.1s; }
+.fade-up-d2 { animation-delay: 0.2s; }
+.fade-up-d3 { animation-delay: 0.3s; }
+.fade-up-d4 { animation-delay: 0.4s; }
+
+/* Observer-based: add .in-view class via JS to trigger */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.in-view.delay-1 { transition-delay: 0.1s; }
+.reveal.in-view.delay-2 { transition-delay: 0.2s; }
+.reveal.in-view.delay-3 { transition-delay: 0.3s; }
+.reveal.in-view.delay-4 { transition-delay: 0.45s; }
+
+/* ─── Glow button effect ─────────────────────────────── */
+.btn-glow {
+  position: relative;
+  overflow: visible;
+}
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: #DC1B1B;
+  opacity: 0;
+  filter: blur(16px);
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+.btn-glow:hover::before {
+  opacity: 0.35;
+}
+

@@ -14,7 +14,7 @@ export default function FitmentGrid() {
     <section id="services" className="bg-[#121212] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-10 lg:mb-14 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 mb-10 lg:mb-14 items-center reveal">
           <div>
             <p className="text-xs font-semibold tracking-widest uppercase text-[#DC1B1B] mb-3">
               Fitment Centre

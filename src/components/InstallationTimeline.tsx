@@ -26,7 +26,7 @@ export default function InstallationTimeline() {
     <section id="process" className="bg-[#09090B] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-10 lg:mb-14">
+        <div className="mb-10 lg:mb-14 reveal">
           <p className="text-xs font-semibold tracking-widest uppercase text-[#DC1B1B] mb-3">
             How It Works
           </p>
@@ -38,7 +38,7 @@ export default function InstallationTimeline() {
         </div>
 
         {/* Steps — stacked on mobile, horizontal on md+ */}
-        <div className="flex flex-col md:flex-row border border-[#27272a]">
+        <div className="flex flex-col md:flex-row border border-[#27272a] reveal delay-2">
           {steps.map((step, i) => (
             <div
               key={step.number}

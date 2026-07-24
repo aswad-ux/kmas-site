@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { CheckCircle, Tag } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { matrixPackages, trackerPackages } from "@/data/packages";
 
 type Tab = "matrix" | "tracker";
@@ -10,12 +11,24 @@ type Tab = "matrix" | "tracker";
 export default function PackageToggle() {
   const [active, setActive] = useState<Tab>("matrix");
   const packages = active === "matrix" ? matrixPackages : trackerPackages;
+  const router = useRouter();
+
+  const selectPackage = (serviceValue: string) => {
+    // Store the preselected service in sessionStorage so QuoteForm can read it
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("kmas_preselect_service", serviceValue);
+    }
+    // Navigate to quote section
+    const el = document.getElementById("quote");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+    else window.location.hash = "quote";
+  };
 
   return (
     <section id="tracking" className="bg-[#09090B] py-16 lg:py-24 border-t border-[#27272a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-10 lg:mb-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 mb-10 lg:mb-12 items-center reveal">
           <div>
             <p className="text-xs font-semibold tracking-widest uppercase text-[#DC1B1B] mb-3">
               Vehicle Tracking
@@ -133,6 +146,7 @@ export default function PackageToggle() {
                 </ul>
                 <a
                   href="#quote"
+                  onClick={(e) => { e.preventDefault(); selectPackage(active === "matrix" ? `tracking-matrix-${pkg.id}` : `tracking-tracker-${pkg.id}`); }}
                   className="inline-flex items-center justify-center w-full border border-[#27272a] py-2.5 text-xs font-semibold uppercase tracking-widest text-[#F9FAFB] hover:bg-[#DC1B1B] hover:border-[#DC1B1B] hover:text-white transition-colors min-h-[44px]"
                 >
                   Select This Package
@@ -183,12 +197,12 @@ export default function PackageToggle() {
 
                 {/* CTA */}
                 <div className="col-span-1 flex items-center justify-end">
-                  <a
-                    href="#quote"
+                  <button
+                    onClick={() => selectPackage(active === "matrix" ? `tracking-matrix-${pkg.id}` : `tracking-tracker-${pkg.id}`)}
                     className="text-xs font-semibold uppercase tracking-widest border border-[#27272a] px-3 py-2 text-[#F9FAFB] group-hover:bg-[#DC1B1B] group-hover:border-[#DC1B1B] group-hover:text-white transition-colors whitespace-nowrap"
                   >
                     Select
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

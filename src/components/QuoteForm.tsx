@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Send, Phone, Loader2 } from "lucide-react";
 
 const provinces = [
@@ -37,6 +37,29 @@ export default function QuoteForm() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  // Pre-fill service if user clicked "Select" on a pricing package
+  useEffect(() => {
+    const preselect = sessionStorage.getItem("kmas_preselect_service");
+    if (preselect) {
+      // Map the stored key to the actual service values in the form
+      const serviceMap: Record<string, string> = {
+        "tracking-matrix-bronze": "tracking-matrix",
+        "tracking-matrix-silver": "tracking-matrix",
+        "tracking-matrix-gold": "tracking-matrix",
+        "tracking-matrix-commercial": "tracking-matrix",
+        "tracking-tracker-response": "tracking-tracker",
+        "tracking-tracker-recover": "tracking-tracker",
+        "tracking-tracker-protect": "tracking-tracker",
+        "tracking-tracker-care": "tracking-tracker",
+      };
+      const mappedService = serviceMap[preselect] || "";
+      if (mappedService) {
+        setForm((prev) => ({ ...prev, service: mappedService }));
+      }
+      sessionStorage.removeItem("kmas_preselect_service");
+    }
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>

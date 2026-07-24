@@ -36,7 +36,7 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-0 lg:pt-20 lg:pb-0">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left – Copy */}
-          <div className="pb-10 lg:pb-20">
+          <div className="pb-10 lg:pb-20 reveal">
             {/* Pre-headline badge */}
             <div className="inline-flex items-center border border-[#27272a] bg-gradient-to-r from-[#09090B] to-[#121212] mb-6 shadow-sm overflow-hidden">
               <div className="bg-[#DC1B1B] px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-center">
@@ -72,7 +72,7 @@ export default function Hero() {
             <div className="mt-7 flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="#quote"
-                className="inline-flex items-center justify-center gap-2 bg-[#DC1B1B] text-white px-6 py-3.5 text-sm font-semibold hover:bg-[#a81212] transition-colors min-h-[48px]"
+                className="btn-glow inline-flex items-center justify-center gap-2 bg-[#DC1B1B] text-white px-6 py-3.5 text-sm font-semibold hover:bg-[#a81212] transition-colors min-h-[48px]"
               >
                 Get a Fitment Quote
               </a>
@@ -108,7 +108,7 @@ export default function Hero() {
 
           {/* Right – Stats panel & Automotive Image */}
           <div className="pb-20 relative lg:mt-0 mt-8">
-            <div className="relative w-full h-[250px] sm:h-[320px] xl:h-[400px] border border-[#27272a] mb-8 bg-[#09090B]">
+            <div className="relative w-full h-[250px] sm:h-[320px] xl:h-[400px] border border-[#27272a] mb-8 bg-[#09090B] overflow-hidden">
               <Image
                 src="/images/hero.png"
                 alt="High-performance sports car dashboard interior"
@@ -116,6 +116,9 @@ export default function Hero() {
                 className="object-cover opacity-90"
                 priority
               />
+              {/* Dramatic red-to-dark gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#DC1B1B]/20 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#09090B]/60 via-transparent to-transparent pointer-events-none" />
             </div>
             
             <div className="border border-[#27272a] bg-[#121212] p-6 xl:p-8 relative z-10 -mt-24 ml-10 shadow-2xl shadow-black/50">
