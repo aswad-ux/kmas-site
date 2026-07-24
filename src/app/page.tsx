@@ -16,9 +16,9 @@ export default function Home() {
       <FitmentGrid />
       <PackageToggle />
       <InstallationTimeline />
-      <ContactLocation />
       <FAQ />
       <QuoteForm />
+      <ContactLocation />
       <Footer />
     </main>
   );

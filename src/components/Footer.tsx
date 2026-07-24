@@ -22,7 +22,7 @@ export default function Footer() {
     <footer className="bg-[#09090B] text-white">
       {/* Main footer content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-[#27272a] pb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 border-b border-[#27272a] pb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
@@ -90,43 +90,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
-            <p className="text-xs font-semibold tracking-widest uppercase text-white/30 mb-4">
-              Contact
-            </p>
-            <div className="space-y-4">
-              <a
-                href="https://wa.me/27615242935"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-sm text-white/60 hover:text-[#DC1B1B] transition-colors"
-              >
-                <MessageCircle size={14} className="text-[#DC1B1B] flex-shrink-0" />
-                +27 61 524 2935 (WhatsApp)
-              </a>
-              <a
-                href="tel:+27100167395"
-                className="flex items-center gap-3 text-sm text-white/60 hover:text-[#DC1B1B] transition-colors"
-              >
-                <Phone size={14} className="text-[#DC1B1B] flex-shrink-0" />
-                +27 10 016 7395
-              </a>
-              <a
-                href="https://maps.app.goo.gl/3JGSAd1yTZmLNECx8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-3 text-sm text-white/60 hover:text-[#DC1B1B] transition-colors"
-              >
-                <MapPin size={14} className="text-[#DC1B1B] flex-shrink-0 mt-0.5" />
-                <span>
-                  The Foundry Cnr, 21 Isando Rd,
-                  <br />
-                  Lathe St, Kempton Park, 1619
-                </span>
-              </a>
-            </div>
-          </div>
         </div>
 
         {/* Bottom bar */}
