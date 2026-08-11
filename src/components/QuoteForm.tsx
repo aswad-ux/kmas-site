@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { Send, Phone, Loader2 } from "lucide-react";
-import emailjs from '@emailjs/browser';
 
 const provinces = [
   "Gauteng",
@@ -80,22 +79,33 @@ export default function QuoteForm() {
     const serviceLabel = services.find(s => s.value === form.service)?.label || form.service;
     
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID',
-        {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY",
+          subject: `New Quote Request: ${serviceLabel} for ${form.make} ${form.model}`,
+          from_name: "Kingsman Website Form",
           name: form.name,
           contact: form.contact,
           make: form.make,
           model: form.model,
           service: serviceLabel,
           province: form.province,
-          callback: form.callback ? 'Yes' : 'No',
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
-      );
+          callback_requested: form.callback ? 'Yes' : 'No',
+        }),
+      });
+
+      const result = await response.json();
       
-      setSubmitted(true);
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        throw new Error(result.message || "Failed to submit form");
+      }
     } catch (error) {
       console.error("Failed to send email:", error);
       alert("Something went wrong. Please try contacting us via WhatsApp or Phone.");
