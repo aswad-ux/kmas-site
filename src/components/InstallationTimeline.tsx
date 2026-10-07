@@ -11,7 +11,7 @@ const steps = [
     number: "02",
     icon: <Wrench size={22} strokeWidth={1.5} />,
     title: "Mobile Installation or Fitment Booking",
-    desc: "Our certified technician comes to your home, office, or workplace — or drop in at our Kempton Park fitment centre. Professional workmanship every time.",
+    desc: "Our certified technician comes to your home, office, or workplace — or drop in at our Edenvale fitment centre. Professional workmanship every time.",
   },
   {
     number: "03",

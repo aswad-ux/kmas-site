@@ -25,9 +25,9 @@ export default function ContactLocation() {
                 <div>
                   <h3 className="text-lg font-bold text-[#F9FAFB] mb-1">Our Workshop</h3>
                   <p className="text-[#F9FAFB]/70 text-sm leading-relaxed">
-                    The Foundry Cnr<br />
-                    21 Isando Road, Lathe St<br />
-                    Kempton Park, 1619<br />
+                    43 Harris Ave<br />
+                    Eden Glen<br />
+                    Edenvale, 1613<br />
                     Gauteng, South Africa
                   </p>
                 </div>
@@ -76,7 +76,7 @@ export default function ContactLocation() {
           {/* Map */}
           <div className="w-full h-[400px] lg:h-full min-h-[400px] border border-[#27272a] bg-[#121212] relative overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.8210350484517!2d28.21404047648356!3d-26.137351661247078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9514757c2e3dd7%3A0x6b63d91cf3d8e578!2sThe%20Foundry!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza"
+              src="https://maps.google.com/maps?q=43%20Harris%20Ave,%20Eden%20Glen,%20Edenvale,%201613&t=&z=14&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) grayscale(80%) contrast(120%)" }}

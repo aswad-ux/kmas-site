@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title:
-    "Kingsman Automotive Solutions – Mobile Tracker & Fitment | Kempton Park, Gauteng",
+    "Kingsman Automotive Solutions – Mobile Tracker & Fitment | Edenvale, Gauteng",
   description:
     "Premium VESA-approved vehicle tracking, smash-and-grab tinting, dash cams, sound upgrades & accessories. Free mobile installation across Gauteng. Call +27 10 016 7395.",
   icons: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "matrix tracker mobile installation Gauteng",
     "tracker south africa vehicle tracking Pretoria",
     "insurance approved vehicle tracking Johannesburg",
-    "smash and grab window tinting Kempton Park",
+    "smash and grab window tinting Edenvale",
     "VESA compliant tinting Gauteng",
     "dash cam installation mobile Midrand",
     "reverse camera fitment bakkie Gauteng",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kingsman Automotive Solutions – Vehicle Tracking & Fitment",
     description:
-      "Authorised Matrix & Tracker SA reseller. Free mobile installation, no fitment fees. Kempton Park, Gauteng.",
+      "Authorised Matrix & Tracker SA reseller. Free mobile installation, no fitment fees. Edenvale, Gauteng.",
     url: "https://kmas.co.za",
     type: "website",
     locale: "en_ZA",
@@ -60,15 +60,15 @@ export const metadata: Metadata = {
       telephone: "+27 10 016 7395",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "The Foundry Cnr, 21 Isando Road, Lathe St",
-        addressLocality: "Kempton Park",
-        postalCode: "1619",
+        streetAddress: "43 Harris Ave, Eden Glen",
+        addressLocality: "Edenvale",
+        postalCode: "1613",
         addressCountry: "ZA",
       },
       priceRange: "R",
       areaServed: {
         "@type": "Place",
-        name: ["Johannesburg", "Pretoria", "Gauteng", "Midrand", "Kempton Park"],
+        name: ["Johannesburg", "Pretoria", "Gauteng", "Midrand", "Edenvale"],
       },
     }),
   },

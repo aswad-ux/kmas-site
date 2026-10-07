@@ -25,7 +25,7 @@ const testimonials = [
     vehicle: "Ford Ranger",
     service: "Bull Bar + Towbar Fitment",
     rating: 5,
-    text: "Had a bull bar and towbar fitted at the Kempton Park centre. Workmanship was excellent, price was fair, and the team was super knowledgeable about Ranger fitments specifically.",
+    text: "Had a bull bar and towbar fitted at the Edenvale centre. Workmanship was excellent, price was fair, and the team was super knowledgeable about Ranger fitments specifically.",
   },
   {
     name: "Nomsa K.",

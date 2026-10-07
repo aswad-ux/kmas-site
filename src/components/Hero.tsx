@@ -96,13 +96,13 @@ export default function Hero() {
 
             {/* Address */}
             <a
-              href="https://maps.app.goo.gl/3JGSAd1yTZmLNECx8"
+              href="https://maps.google.com/?q=43+Harris+Ave,+Eden+Glen,+Edenvale,+1613"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-5 inline-flex items-start gap-2 text-xs text-[#F9FAFB]/50 hover:text-[#DC1B1B] transition-colors"
             >
               <MapPin size={12} className="mt-0.5 flex-shrink-0" />
-              <span>The Foundry Cnr, 21 Isando Rd, Lathe St, Kempton Park, 1619</span>
+              <span>43 Harris Ave, Eden Glen, Edenvale, 1613</span>
             </a>
           </div>
 
