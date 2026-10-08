@@ -38,7 +38,7 @@ export default function PackageToggle() {
               <br />
               Insure.
             </h2>
-            <p className="text-[#F9FAFB]/60 text-sm sm:text-base max-w-xl leading-relaxed">
+            <p className="text-[#F9FAFB]/80 text-sm sm:text-base max-w-xl leading-relaxed">
               As an authorised reseller of both Matrix and Tracker South Africa,
               we supply, install, and certificate every unit. All packages
               include a VESA-compliant insurance certificate on the day of
@@ -98,13 +98,13 @@ export default function PackageToggle() {
         <div className="border border-[#27272a] divide-y divide-[#27272a]">
           {/* Table header — desktop only */}
           <div className="hidden lg:grid grid-cols-12 bg-[#121212] px-6 py-3">
-            <div className="col-span-3 text-xs font-semibold tracking-widest uppercase text-white/60">
+            <div className="col-span-3 text-xs font-semibold tracking-widest uppercase text-white/80">
               Package
             </div>
-            <div className="col-span-2 text-xs font-semibold tracking-widest uppercase text-white/60">
+            <div className="col-span-2 text-xs font-semibold tracking-widest uppercase text-white/80">
               Price p/m
             </div>
-            <div className="col-span-6 text-xs font-semibold tracking-widest uppercase text-white/60">
+            <div className="col-span-6 text-xs font-semibold tracking-widest uppercase text-white/80">
               Features Included
             </div>
             <div className="col-span-1" />
@@ -137,7 +137,7 @@ export default function PackageToggle() {
                   {pkg.features.map((f) => (
                     <li
                       key={f}
-                      className="flex items-center gap-1.5 text-xs text-[#F9FAFB]/70"
+                      className="flex items-center gap-1.5 text-xs text-[#F9FAFB]/90"
                     >
                       <CheckCircle size={11} className="text-[#DC1B1B] flex-shrink-0" />
                       {f}
@@ -183,7 +183,7 @@ export default function PackageToggle() {
                     {pkg.features.map((f) => (
                       <li
                         key={f}
-                        className="flex items-center gap-1.5 text-xs text-[#F9FAFB]/70"
+                        className="flex items-center gap-1.5 text-xs text-[#F9FAFB]/90"
                       >
                         <CheckCircle
                           size={12}
@@ -209,8 +209,8 @@ export default function PackageToggle() {
           ))}
         </div>
 
-        <p className="mt-4 text-xs text-[#F9FAFB]/40">
-          * All prices are approximate monthly subscriptions. <strong className="text-[#F9FAFB]/70">We do not charge any installation fees!</strong> Contact us for an exact quote.
+        <p className="mt-4 text-xs text-[#F9FAFB]/80">
+          * All prices are approximate monthly subscriptions. <strong className="text-[#F9FAFB]/90">We do not charge any installation fees!</strong> Contact us for an exact quote.
         </p>
       </div>
     </section>

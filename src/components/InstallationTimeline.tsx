@@ -59,7 +59,7 @@ export default function InstallationTimeline() {
               <h3 className="text-base sm:text-lg font-semibold text-white mb-3">
                 {step.title}
               </h3>
-              <p className="text-xs sm:text-sm text-white/50 leading-relaxed">
+              <p className="text-xs sm:text-sm text-white/70 leading-relaxed">
                 {step.desc}
               </p>
             </div>
@@ -78,7 +78,7 @@ export default function InstallationTimeline() {
             href="https://wa.me/27615242935"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-white/50 hover:text-white transition-colors"
+            className="text-sm text-white/70 hover:text-white transition-colors"
           >
             Or message us on WhatsApp →
           </a>

@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
           
           <div className="mb-12 border-b border-[#27272a] pb-8">
             <h1 className="text-3xl sm:text-4xl font-bold text-[#F9FAFB] mb-4">Privacy Policy (POPIA)</h1>
-            <p className="text-[#F9FAFB]/60 text-sm">Last Updated: {new Date().toLocaleDateString('en-ZA')}</p>
+            <p className="text-[#F9FAFB]/80 text-sm">Last Updated: {new Date().toLocaleDateString('en-ZA')}</p>
           </div>
 
           <div className="space-y-8 text-[#F9FAFB]/80 text-sm leading-relaxed">

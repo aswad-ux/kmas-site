@@ -77,7 +77,7 @@ export default function FAQ() {
                     className={`flex-shrink-0 w-7 h-7 border flex items-center justify-center transition-colors ${
                       isOpen
                         ? "border-[#DC1B1B] bg-[#DC1B1B] text-white"
-                        : "border-[#27272a] text-[#F9FAFB]/50 group-hover:border-[#DC1B1B] group-hover:text-[#DC1B1B]"
+                        : "border-[#27272a] text-[#F9FAFB]/90 group-hover:border-[#DC1B1B] group-hover:text-[#DC1B1B]"
                     }`}
                   >
                     {isOpen ? <Minus size={14} /> : <Plus size={14} />}
@@ -90,7 +90,7 @@ export default function FAQ() {
                     isOpen ? "max-h-64 pb-6 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <p className="px-6 text-[#F9FAFB]/65 text-sm leading-relaxed border-t border-[#27272a] pt-4">
+                  <p className="px-6 text-[#F9FAFB]/80 text-sm leading-relaxed border-t border-[#27272a] pt-4">
                     {faq.answer}
                   </p>
                 </div>

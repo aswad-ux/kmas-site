@@ -34,7 +34,7 @@ export default function AboutUs() {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#F9FAFB] leading-tight mb-6">
               Gauteng's Premier Mobile Fitment Specialists
             </h2>
-            <div className="space-y-4 text-sm sm:text-base text-[#F9FAFB]/70 leading-relaxed mb-10">
+            <div className="space-y-4 text-sm sm:text-base text-[#F9FAFB]/90 leading-relaxed mb-10">
               <p>
                 At Kingsman Automotive Solutions, we believe vehicle security and aftermarket enhancements shouldn't be an inconvenience. That's why we bring the fitment centre to you.
               </p>
@@ -54,7 +54,7 @@ export default function AboutUs() {
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-[#F9FAFB] mb-1">VESA Certified</h4>
-                  <p className="text-xs text-[#F9FAFB]/50 leading-relaxed">Strict adherence to national security fitment standards.</p>
+                  <p className="text-xs text-[#F9FAFB]/90 leading-relaxed">Strict adherence to national security fitment standards.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -63,7 +63,7 @@ export default function AboutUs() {
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-[#F9FAFB] mb-1">Authorised Reseller</h4>
-                  <p className="text-xs text-[#F9FAFB]/50 leading-relaxed">Direct partner of Matrix and Tracker South Africa.</p>
+                  <p className="text-xs text-[#F9FAFB]/90 leading-relaxed">Direct partner of Matrix and Tracker South Africa.</p>
                 </div>
               </div>
             </div>

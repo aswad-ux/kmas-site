@@ -79,7 +79,7 @@ export default function Testimonials() {
               <StarRating count={t.rating} />
 
               {/* Review text */}
-              <p className="text-sm text-[#F9FAFB]/70 leading-relaxed flex-1">
+              <p className="text-sm text-[#F9FAFB]/90 leading-relaxed flex-1">
                 &ldquo;{t.text}&rdquo;
               </p>
 
@@ -89,7 +89,7 @@ export default function Testimonials() {
               {/* Author */}
               <div>
                 <p className="text-sm font-semibold text-[#F9FAFB]">{t.name}</p>
-                <p className="text-xs text-[#F9FAFB]/40 mt-0.5">{t.location}</p>
+                <p className="text-xs text-[#F9FAFB]/80 mt-0.5">{t.location}</p>
                 <p className="text-[10px] font-mono text-[#DC1B1B] mt-1 tracking-wider uppercase">
                   {t.vehicle} · {t.service}
                 </p>
@@ -99,9 +99,9 @@ export default function Testimonials() {
         </div>
 
         {/* Bottom trust note */}
-        <p className="mt-5 text-xs text-[#F9FAFB]/30 text-center">
+        <p className="mt-5 text-xs text-[#F9FAFB]/50 text-center">
           All reviews from verified customers. Our technicians maintain a{" "}
-          <span className="text-[#F9FAFB]/60 font-semibold">4.9 / 5 ★</span> average rating across Gauteng.
+          <span className="text-[#F9FAFB]/80 font-semibold">4.9 / 5 ★</span> average rating across Gauteng.
         </p>
       </div>
     </section>

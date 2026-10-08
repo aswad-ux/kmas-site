@@ -35,7 +35,7 @@ export default function Footer() {
                 className="h-8 w-auto object-contain"
               />
             </div>
-            <p className="text-sm text-white/50 leading-relaxed mb-6">
+            <p className="text-sm text-white/70 leading-relaxed mb-6">
               Kingsman Automotive Solutions — South Africa's authorised reseller
               and mobile installer of premium vehicle tracking and security
               systems.
@@ -45,7 +45,7 @@ export default function Footer() {
               {["VESA Compliant", "Authorised Reseller", "Certified Fitment"].map((b) => (
                 <span
                   key={b}
-                  className="text-[10px] font-semibold tracking-widest uppercase border border-[#3f3f46] px-2 py-1 text-white/40"
+                  className="text-[10px] font-semibold tracking-widest uppercase border border-[#3f3f46] px-2 py-1 text-white/80"
                 >
                   {b}
                 </span>
@@ -63,7 +63,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-white/60 hover:text-[#DC1B1B] transition-colors"
+                    className="text-sm text-white/80 hover:text-[#DC1B1B] transition-colors"
                   >
                     {link.label}
                   </a>
@@ -82,7 +82,7 @@ export default function Footer() {
                 <li key={s}>
                   <a
                     href="#services"
-                    className="text-sm text-white/60 hover:text-[#DC1B1B] transition-colors"
+                    className="text-sm text-white/80 hover:text-[#DC1B1B] transition-colors"
                   >
                     {s}
                   </a>

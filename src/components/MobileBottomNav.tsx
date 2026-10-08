@@ -22,7 +22,7 @@ export default function MobileBottomNav() {
             href={href}
             target={external ? "_blank" : undefined}
             rel={external ? "noopener noreferrer" : undefined}
-            className={`flex flex-col items-center justify-center gap-1 text-[#F9FAFB]/50 hover:text-[#DC1B1B] transition-colors ${
+            className={`flex flex-col items-center justify-center gap-1 text-[#F9FAFB]/90 hover:text-[#DC1B1B] transition-colors ${
               label === "WhatsApp"
                 ? "text-[#DC1B1B]"
                 : ""

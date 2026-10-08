@@ -24,7 +24,7 @@ export default function FitmentGrid() {
               <br />
               Installations
             </h2>
-            <p className="text-[#F9FAFB]/60 text-sm sm:text-base max-w-xl leading-relaxed">
+            <p className="text-[#F9FAFB]/80 text-sm sm:text-base max-w-xl leading-relaxed">
               Every fitment is performed by certified technicians with the right
               tools for your specific vehicle. No shortcuts. No void warranties.
               Professional workmanship, guaranteed.
@@ -49,10 +49,10 @@ export default function FitmentGrid() {
               className="bg-[#09090B] border border-[#27272a] p-5 flex flex-col gap-4"
             >
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 border border-[#27272a] flex items-center justify-center text-[#F9FAFB]/60 flex-shrink-0">
+                <div className="w-10 h-10 border border-[#27272a] flex items-center justify-center text-[#F9FAFB]/80 flex-shrink-0">
                   {iconMap[service.icon]}
                 </div>
-                <span className="text-[10px] font-mono text-[#F9FAFB]/30">
+                <span className="text-[10px] font-mono text-[#F9FAFB]/50">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
@@ -60,7 +60,7 @@ export default function FitmentGrid() {
                 <h3 className="text-sm font-semibold text-[#F9FAFB] leading-snug mb-2">
                   {service.title}
                 </h3>
-                <p className="text-xs text-[#F9FAFB]/65 leading-relaxed">
+                <p className="text-xs text-[#F9FAFB]/80 leading-relaxed">
                   {service.copy}
                 </p>
               </div>
@@ -68,7 +68,7 @@ export default function FitmentGrid() {
                 {service.keywords.map((kw) => (
                   <span
                     key={kw}
-                    className="text-[9px] font-semibold tracking-widest uppercase border border-[#27272a] px-2 py-0.5 text-[#F9FAFB]/50"
+                    className="text-[9px] font-semibold tracking-widest uppercase border border-[#27272a] px-2 py-0.5 text-[#F9FAFB]/90"
                   >
                     {kw}
                   </span>
@@ -93,14 +93,14 @@ export default function FitmentGrid() {
             >
               {/* Number */}
               <div className="col-span-1 flex items-start pt-0.5">
-                <span className="text-xs font-mono text-[#F9FAFB]/30">
+                <span className="text-xs font-mono text-[#F9FAFB]/50">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
 
               {/* Icon */}
               <div className="col-span-1 flex items-start">
-                <div className="w-10 h-10 border border-[#27272a] flex items-center justify-center text-[#F9FAFB]/60 group-hover:border-[#DC1B1B] group-hover:text-[#DC1B1B] transition-colors">
+                <div className="w-10 h-10 border border-[#27272a] flex items-center justify-center text-[#F9FAFB]/80 group-hover:border-[#DC1B1B] group-hover:text-[#DC1B1B] transition-colors">
                   {iconMap[service.icon]}
                 </div>
               </div>
@@ -114,7 +114,7 @@ export default function FitmentGrid() {
                   {service.keywords.map((kw) => (
                     <span
                       key={kw}
-                      className="text-[10px] font-semibold tracking-widest uppercase border border-[#27272a] px-2 py-0.5 text-[#F9FAFB]/50"
+                      className="text-[10px] font-semibold tracking-widest uppercase border border-[#27272a] px-2 py-0.5 text-[#F9FAFB]/90"
                     >
                       {kw}
                     </span>
@@ -124,7 +124,7 @@ export default function FitmentGrid() {
 
               {/* Copy */}
               <div className="col-span-5">
-                <p className="text-sm text-[#F9FAFB]/65 leading-relaxed">
+                <p className="text-sm text-[#F9FAFB]/80 leading-relaxed">
                   {service.copy}
                 </p>
               </div>

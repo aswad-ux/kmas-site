@@ -125,7 +125,7 @@ export default function QuoteForm() {
             <h3 className="text-xl font-bold text-[#F9FAFB] mb-2">
               Quote Request Received
             </h3>
-            <p className="text-sm text-[#F9FAFB]/60 mb-6">
+            <p className="text-sm text-[#F9FAFB]/80 mb-6">
               We'll be in touch within the hour. For urgent enquiries, reach us
               on WhatsApp.
             </p>
@@ -157,7 +157,7 @@ export default function QuoteForm() {
               <br />
               or Get a Quote
             </h2>
-            <p className="text-sm text-[#F9FAFB]/60 leading-relaxed mb-8 max-w-md">
+            <p className="text-sm text-[#F9FAFB]/80 leading-relaxed mb-8 max-w-md">
               Fill in your details and we'll send you a clear quote within the
               hour. No pressure, no spam. Need faster? Message us on WhatsApp
               now.
@@ -178,7 +178,7 @@ export default function QuoteForm() {
                 </div>
                 <div>
                   <p className="text-xs font-semibold text-[#F9FAFB]">WhatsApp</p>
-                  <p className="text-sm text-[#F9FAFB]/60">+27 61 524 2935</p>
+                  <p className="text-sm text-[#F9FAFB]/80">+27 61 524 2935</p>
                 </div>
               </a>
               <a
@@ -190,7 +190,7 @@ export default function QuoteForm() {
                 </div>
                 <div>
                   <p className="text-xs font-semibold text-[#F9FAFB]">Call Us</p>
-                  <p className="text-sm text-[#F9FAFB]/60">+27 10 016 7395</p>
+                  <p className="text-sm text-[#F9FAFB]/80">+27 10 016 7395</p>
                 </div>
               </a>
             </div>
@@ -204,7 +204,7 @@ export default function QuoteForm() {
             >
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-widest text-[#F9FAFB]/50 mb-1.5">
+                  <label className="block text-xs font-semibold uppercase tracking-widest text-[#F9FAFB]/90 mb-1.5">
                     Vehicle Make
                   </label>
                   <input
@@ -218,7 +218,7 @@ export default function QuoteForm() {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-widest text-[#F9FAFB]/50 mb-1.5">
+                  <label className="block text-xs font-semibold uppercase tracking-widest text-[#F9FAFB]/90 mb-1.5">
                     Vehicle Model
                   </label>
                   <input
@@ -234,7 +234,7 @@ export default function QuoteForm() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-widest text-[#F9FAFB]/50 mb-1.5">
+                <label className="block text-xs font-semibold uppercase tracking-widest text-[#F9FAFB]/90 mb-1.5">
                   Desired Service
                 </label>
                 <select
@@ -254,7 +254,7 @@ export default function QuoteForm() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-widest text-[#F9FAFB]/50 mb-1.5">
+                <label className="block text-xs font-semibold uppercase tracking-widest text-[#F9FAFB]/90 mb-1.5">
                   Province
                 </label>
                 <select
@@ -275,7 +275,7 @@ export default function QuoteForm() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-widest text-[#F9FAFB]/50 mb-1.5">
+                  <label className="block text-xs font-semibold uppercase tracking-widest text-[#F9FAFB]/90 mb-1.5">
                     Your Name
                   </label>
                   <input
@@ -289,7 +289,7 @@ export default function QuoteForm() {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-widest text-[#F9FAFB]/50 mb-1.5">
+                  <label className="block text-xs font-semibold uppercase tracking-widest text-[#F9FAFB]/90 mb-1.5">
                     Contact Number
                   </label>
                   <input
@@ -313,7 +313,7 @@ export default function QuoteForm() {
                   onChange={handleChange}
                   className="w-4 h-4 accent-[#DC1B1B]"
                 />
-                <span className="text-sm text-[#F9FAFB]/60">
+                <span className="text-sm text-[#F9FAFB]/80">
                   Request an immediate callback
                 </span>
               </label>
@@ -331,7 +331,7 @@ export default function QuoteForm() {
                 {loading ? "Sending…" : "Submit Quote Request"}
               </button>
 
-              <p className="text-[10px] text-center text-[#F9FAFB]/30">
+              <p className="text-[10px] text-center text-[#F9FAFB]/50">
                 We'll respond within the hour. No spam, ever.
               </p>
             </form>

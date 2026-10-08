@@ -48,7 +48,7 @@ export default function Hero() {
             </h1>
 
             {/* Sub-headline */}
-            <p className="mt-5 text-sm sm:text-base text-[#F9FAFB]/70 max-w-xl leading-relaxed">
+            <p className="mt-5 text-sm sm:text-base text-[#F9FAFB]/90 max-w-xl leading-relaxed">
               Fast mobile tracking installation across Gauteng, instant
               insurance certificates, smash-and-grab protection, and premium
               aftermarket fitments — all from one authorised South African
@@ -77,7 +77,7 @@ export default function Hero() {
               href="https://maps.google.com/?q=43+Harris+Ave,+Eden+Glen,+Edenvale,+1613"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-flex items-start gap-2 text-xs text-[#F9FAFB]/50 hover:text-[#DC1B1B] transition-colors"
+              className="mt-5 inline-flex items-start gap-2 text-xs text-[#F9FAFB]/90 hover:text-[#DC1B1B] transition-colors"
             >
               <MapPin size={12} className="mt-0.5 flex-shrink-0" />
               <span>43 Harris Ave, Eden Glen, Edenvale, 1613</span>

@@ -24,7 +24,7 @@ export default function ContactLocation() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-[#F9FAFB] mb-1">Our Workshop</h3>
-                  <p className="text-[#F9FAFB]/70 text-sm leading-relaxed">
+                  <p className="text-[#F9FAFB]/90 text-sm leading-relaxed">
                     43 Harris Ave<br />
                     Eden Glen<br />
                     Edenvale, 1613<br />
@@ -39,7 +39,7 @@ export default function ContactLocation() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-[#F9FAFB] mb-1">Get in Touch</h3>
-                  <p className="text-[#F9FAFB]/70 text-sm leading-relaxed">
+                  <p className="text-[#F9FAFB]/90 text-sm leading-relaxed">
                     Calls: +27 10 016 7395<br />
                     WhatsApp: +27 61 524 2935
                   </p>
@@ -52,7 +52,7 @@ export default function ContactLocation() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-[#F9FAFB] mb-1">Business Hours</h3>
-                  <p className="text-[#F9FAFB]/70 text-sm leading-relaxed">
+                  <p className="text-[#F9FAFB]/90 text-sm leading-relaxed">
                     Monday - Friday: 08:00 - 17:00<br />
                     Saturday: 08:00 - 13:00<br />
                     Sunday &amp; Public Holidays: Closed
