@@ -76,7 +76,7 @@ export default function ContactLocation() {
           {/* Map */}
           <div className="w-full h-[400px] lg:h-full min-h-[400px] border border-[#27272a] bg-[#121212] relative overflow-hidden">
             <iframe
-              src="https://maps.google.com/maps?q=43%20Harris%20Ave,%20Eden%20Glen,%20Edenvale,%201613&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?width=100%25&height=100%25&hl=en&q=43%20Harris%20Ave,%20Eden%20Glen,%20Edenvale,%201613+(Kingsman%20Automotive%20Solutions)&t=&z=15&ie=UTF8&iwloc=B&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) grayscale(80%) contrast(120%)" }}
