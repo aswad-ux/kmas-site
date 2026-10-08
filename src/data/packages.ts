@@ -2,7 +2,7 @@
 export const matrixPackages = [
   {
     id: "bronze",
-    name: "Matrix Bronze (MXV)",
+    name: "MXV Bronze",
     price: "R179 p/m",
     tag: null,
     features: [
@@ -16,7 +16,7 @@ export const matrixPackages = [
   },
   {
     id: "silver",
-    name: "Matrix Silver",
+    name: "MXV Silver",
     price: "R189 p/m",
     tag: "Most Popular",
     features: [
@@ -30,7 +30,7 @@ export const matrixPackages = [
   },
   {
     id: "gold",
-    name: "Matrix Gold",
+    name: "MXV Gold",
     price: "R199 p/m",
     tag: null,
     features: [
