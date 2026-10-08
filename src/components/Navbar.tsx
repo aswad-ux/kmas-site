@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, MessageCircle, Menu, X } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
@@ -54,15 +54,6 @@ export default function Navbar() {
               <Phone size={14} />
               +27 10 016 7395
             </a>
-            <a
-              href="https://wa.me/27615242935"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 bg-[#DC1B1B] text-white text-sm px-4 py-1.5 hover:bg-[#a81212] transition-colors"
-            >
-              <MessageCircle size={14} />
-              WhatsApp
-            </a>
           </div>
 
           {/* Mobile Hamburger */}
@@ -95,14 +86,6 @@ export default function Navbar() {
               className="flex items-center justify-center gap-2 border border-[#27272a] py-2.5 text-sm text-[#F9FAFB]"
             >
               <Phone size={14} /> Call +27 10 016 7395
-            </a>
-            <a
-              href="https://wa.me/27615242935"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-[#DC1B1B] text-white py-2.5 text-sm"
-            >
-              <MessageCircle size={14} /> WhatsApp +27 61 524 2935
             </a>
           </div>
         </div>
