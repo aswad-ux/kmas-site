@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle, Tag } from "lucide-react";
+import { CheckCircle, Tag, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { matrixPackages, trackerPackages } from "@/data/packages";
@@ -12,6 +12,12 @@ export default function PackageToggle() {
   const [active, setActive] = useState<Tab>("matrix");
   const packages = active === "matrix" ? matrixPackages : trackerPackages;
   const router = useRouter();
+
+  const getWhatsAppUrl = (pkg: { name: string; price: string }) => {
+    const brand = active === "matrix" ? "Matrix" : "Tracker SA";
+    const text = `Hi KMAS, I would like to enquire about / book the ${brand} ${pkg.name} (${pkg.price}) package. My vehicle make and model is: `;
+    return `https://wa.me/27615242935?text=${encodeURIComponent(text)}`;
+  };
 
   const selectPackage = (serviceValue: string) => {
     // Store the preselected service in sessionStorage so QuoteForm can read it
@@ -97,17 +103,19 @@ export default function PackageToggle() {
         {/* Package list */}
         <div className="border border-[#27272a] divide-y divide-[#27272a]">
           {/* Table header — desktop only */}
-          <div className="hidden lg:grid grid-cols-12 bg-[#121212] px-6 py-3">
+          <div className="hidden lg:grid grid-cols-12 bg-[#121212] px-6 py-3 items-center">
             <div className="col-span-3 text-xs font-semibold tracking-widest uppercase text-white/80">
               Package
             </div>
             <div className="col-span-2 text-xs font-semibold tracking-widest uppercase text-white/80">
               Price p/m
             </div>
-            <div className="col-span-6 text-xs font-semibold tracking-widest uppercase text-white/80">
+            <div className="col-span-4 text-xs font-semibold tracking-widest uppercase text-white/80">
               Features Included
             </div>
-            <div className="col-span-1" />
+            <div className="col-span-3 text-right text-xs font-semibold tracking-widest uppercase text-white/80">
+              Instant Booking &amp; Quote
+            </div>
           </div>
 
           {packages.map((pkg) => (
@@ -116,13 +124,13 @@ export default function PackageToggle() {
               className="group bg-[#09090B] hover:bg-[#121212] transition-colors"
             >
               {/* Mobile layout */}
-              <div className="lg:hidden p-5 space-y-3">
+              <div className="lg:hidden p-5 space-y-4">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <span className="font-semibold text-sm text-[#F9FAFB] block">
+                    <span className="font-semibold text-base text-[#F9FAFB] block">
                       {pkg.name}
                     </span>
-                    <span className="text-base font-bold text-[#DC1B1B] mt-0.5 block">
+                    <span className="text-lg font-bold text-[#DC1B1B] mt-0.5 block">
                       {pkg.price}
                     </span>
                   </div>
@@ -144,20 +152,34 @@ export default function PackageToggle() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="#quote"
-                  onClick={(e) => { e.preventDefault(); selectPackage(active === "matrix" ? `tracking-matrix-${pkg.id}` : `tracking-tracker-${pkg.id}`); }}
-                  className="inline-flex items-center justify-center w-full border border-[#27272a] py-2.5 text-xs font-semibold uppercase tracking-widest text-[#F9FAFB] hover:bg-[#DC1B1B] hover:border-[#DC1B1B] hover:text-white transition-colors min-h-[44px]"
-                >
-                  Select This Package
-                </a>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+                  <a
+                    href={getWhatsAppUrl(pkg)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-black font-bold py-2.5 px-4 text-xs uppercase tracking-wider transition-colors min-h-[44px]"
+                  >
+                    <MessageCircle size={15} className="fill-black" />
+                    WhatsApp Quote
+                  </a>
+                  <a
+                    href="#quote"
+                    onClick={(e) => { 
+                      e.preventDefault(); 
+                      selectPackage(active === "matrix" ? `tracking-matrix-${pkg.id}` : `tracking-tracker-${pkg.id}`); 
+                    }}
+                    className="inline-flex items-center justify-center border border-[#27272a] bg-[#121212] py-2.5 px-4 text-xs font-semibold uppercase tracking-wider text-[#F9FAFB] hover:border-[#DC1B1B] hover:text-[#DC1B1B] transition-colors min-h-[44px]"
+                  >
+                    Online Form
+                  </a>
+                </div>
               </div>
 
               {/* Desktop layout */}
-              <div className="hidden lg:grid grid-cols-12 gap-4 px-6 py-6">
+              <div className="hidden lg:grid grid-cols-12 gap-4 px-6 py-5 items-center">
                 {/* Name + tag */}
                 <div className="col-span-3">
-                  <div className="flex flex-wrap items-start gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className="font-semibold text-sm text-[#F9FAFB]">
                       {pkg.name}
                     </span>
@@ -178,9 +200,9 @@ export default function PackageToggle() {
                 </div>
 
                 {/* Features */}
-                <div className="col-span-6">
-                  <ul className="flex flex-wrap gap-x-5 gap-y-1.5">
-                    {pkg.features.map((f) => (
+                <div className="col-span-4">
+                  <ul className="flex flex-wrap gap-x-4 gap-y-1">
+                    {pkg.features.slice(0, 4).map((f) => (
                       <li
                         key={f}
                         className="flex items-center gap-1.5 text-xs text-[#F9FAFB]/90"
@@ -192,16 +214,31 @@ export default function PackageToggle() {
                         {f}
                       </li>
                     ))}
+                    {pkg.features.length > 4 && (
+                      <li className="text-[11px] text-[#F9FAFB]/60">
+                        +{pkg.features.length - 4} more features
+                      </li>
+                    )}
                   </ul>
                 </div>
 
-                {/* CTA */}
-                <div className="col-span-1 flex items-center justify-end">
+                {/* Dual CTA: WhatsApp + Form */}
+                <div className="col-span-3 flex items-center justify-end gap-2">
+                  <a
+                    href={getWhatsAppUrl(pkg)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-1.5 bg-[#25D366] hover:bg-[#20ba59] text-black font-bold text-xs uppercase tracking-wider px-3.5 py-2.5 transition-colors whitespace-nowrap shadow-sm"
+                    title="Open WhatsApp with pre-filled package details"
+                  >
+                    <MessageCircle size={14} className="fill-black" />
+                    WhatsApp
+                  </a>
                   <button
                     onClick={() => selectPackage(active === "matrix" ? `tracking-matrix-${pkg.id}` : `tracking-tracker-${pkg.id}`)}
-                    className="text-xs font-semibold uppercase tracking-widest border border-[#27272a] px-3 py-2 text-[#F9FAFB] group-hover:bg-[#DC1B1B] group-hover:border-[#DC1B1B] group-hover:text-white transition-colors whitespace-nowrap"
+                    className="text-xs font-semibold uppercase tracking-wider border border-[#27272a] bg-[#121212] px-3.5 py-2.5 text-[#F9FAFB] hover:border-[#DC1B1B] hover:text-[#DC1B1B] transition-colors whitespace-nowrap"
                   >
-                    Select
+                    Quote Form
                   </button>
                 </div>
               </div>
